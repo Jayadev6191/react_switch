@@ -1,0 +1,180 @@
+.app {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.app-danger {
+  background-color: #ec5c7d;
+}
+.app-success {
+  background-color: #c5e8a5;
+}
+.app .text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 50px;
+  color: #fff;
+  width: 250px;
+  padding: 20px;
+  top: 150px;
+  border-radius: 20%;
+}
+
+.button_container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.button_container .btn {
+  cursor: pointer;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 100%;
+}
+.button_container .face {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 20px;
+  top: 20px;
+}
+.button_container .face .eyes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 30px;
+}
+.button_container .face .eyes .eye {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+}
+.button_container .face .mouth_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50px;
+}
+.button_container .face .mouth_container .mouth {
+  position: relative;
+  height: 20px;
+}
+.button_container .face .mouth_container .mouth.sad {
+  top: 20px;
+  height: 35px;
+  width: 70px;
+  border-radius: 100% 100% 0% 0%;
+  border-top: 4px solid #000;
+}
+.button_container .face .mouth_container .mouth.happy {
+  height: 35px;
+  width: 70px;
+  border-radius: 0% 0% 100% 100%;
+  border-bottom: 4px solid #000;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d9534f;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch.off,
+.switch.on {
+  width: 60px;
+  height: 35px;
+  border-radius: 25px;
+  position: absolute;
+  top: 60px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.switch.off {
+  background-color: #d9534f;
+}
+
+.switch.on {
+  background-color: #5cb85c;
+}
+
+.switch.off:before,
+.switch.on:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  top: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.switch.on:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+input:checked + .slider {
+  background-color: #5cb85c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
